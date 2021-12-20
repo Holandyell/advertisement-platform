@@ -23,9 +23,5 @@ include 'Template/html_start.php';
 </section>
 
 
-
-
-
 <?php 
 include 'Template/html_end.php';
-?>

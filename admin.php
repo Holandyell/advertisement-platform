@@ -1,5 +1,6 @@
 <?php
-include "config.php";
+
+include 'App/config.php';
 
 $locationRepository = new LocationRepository();
 $locations = $locationRepository->getLocationList();
@@ -33,16 +34,8 @@ include "Template/html_start.php";
 </div>
 
 <form action="" method="get">
-<input type="text" class="form-control" id="add_cities" name="city" autocomplete="off" placeholder="Add The City Name">
-<button type="submit" class="btn btn-secondary mt-2">submit</button>
+    <input type="text" class="form-control" id="add_cities" name="city" autocomplete="off" placeholder="Add The City Name">
+    <button type="submit" class="btn btn-secondary mt-2">submit</button>
 </form>
-
-
-
-
-
-
-
-
 
 <?php include "Template/html_end.php";?>

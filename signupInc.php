@@ -1,4 +1,8 @@
 <?php
+
+require_once 'App/config.php';
+require_once 'App/functions.php';
+
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $emil = $_POST['email'];
@@ -6,13 +10,11 @@ if (isset($_POST['submit'])) {
     $pwd = $_POST['pwd'];
     $pwdrepeat = $_POST['pwdrepeat'];
 
-    require_once 'config.php';
-    require_once 'functions.php';
 
-if (emptyInputSignup($name, $emil, $username, $pwd, $pwdrepeat) !== false) {
-    header("location: ../signup.php?error=emptyinput");
-    exit();
-}
+    if (emptyInputSignup($name, $emil, $username, $pwd, $pwdrepeat) !== false) {
+        header("location: ../signup.php?error=emptyinput");
+        exit();
+    }
     if (invalidUid($username) !== false) {
         header("location: ../signu.php?error=invaliduid");
         exit();
@@ -33,9 +35,7 @@ if (emptyInputSignup($name, $emil, $username, $pwd, $pwdrepeat) !== false) {
         exit();
     }
     createUser($conn, $name, $emil, $username, $pwd);
-} 
-else {
+} else {
     header("location: ../signup.php");
     exit();
 }
-?>

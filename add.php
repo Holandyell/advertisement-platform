@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include 'App/config.php';
 
 $categories = (new CategoryRepository())->getCategoryList();
 $locations = (new LocationRepository())->getLocationList();

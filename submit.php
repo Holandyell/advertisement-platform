@@ -1,6 +1,6 @@
 <?php
 
-include 'config.php';
+include 'App/config.php';
 
 if (!empty($_POST)) {
     $title = $_POST['title'];

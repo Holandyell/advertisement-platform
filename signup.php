@@ -42,8 +42,3 @@ include 'Template/html_start.php';
 
 <?php 
 include 'Template/html_end.php';
-?>
-
-
-
-

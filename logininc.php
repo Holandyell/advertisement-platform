@@ -1,11 +1,11 @@
 <?php
 
+require_once 'App/config.php';
+require_once 'App/functions.php';
+
 if(isset($_POST["submit"])) {
     $username = $_POST["uid"];
     $pwd = $_POST["pwd"];
-
-    require_once 'config.php';
-    require_once 'functions.php';
 
     if (emptyInputLogin($username, $pwd) !== false) {
         header("location: ../login.php?error=emptyinput");

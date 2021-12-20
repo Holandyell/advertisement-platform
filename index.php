@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include 'App/config.php';
 
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
