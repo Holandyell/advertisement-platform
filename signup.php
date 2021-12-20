@@ -5,7 +5,7 @@ include 'Template/html_start.php';
 <section style="text-align:center;" class="signup-form">
     <h2>Sign Up</h2>
 
-    <form action="signupInc.php"  method="POST">
+    <form action="App/signup_submit.php"  method="POST">
         <input type="text"  name="name" placeholder="Full name..."> <br>
         <input type="text" name="email" placeholder="Email..."> <br>
         <input type="text" name="uid" placeholder="Username..."> <br>

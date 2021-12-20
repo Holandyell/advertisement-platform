@@ -7,7 +7,7 @@ $locations = (new LocationRepository())->getLocationList();
 include 'Template/html_start.php';
 ?>
 
-<form class="mt-4" method="POST" action="/submit.php">
+<form class="mt-4" method="POST" action="App/create_ad_submit.php">
     <div class="form-group">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" name="title" autocomplete="off" placeholder="Enter the title">
