@@ -73,7 +73,7 @@ include 'Template/html_start.php';
 
 <div class="container">
     <div class="mt-4">
-        <a class="btn btn-primary btn-sm" href="/example/add.php">Create</a>
+        <a class="btn btn-primary btn-sm" href="<?=_BASE_URL_?>/add.php">Create</a>
     </div>
 
     <div class="row">
@@ -151,8 +151,8 @@ include 'Template/html_start.php';
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success mt-2">Apply</button>
-                    <a href="/example" class="btn btn-secondary mt-2">Clear</a>
-                    <a href="/example/admin.php" class="btn btn-secondary mt-2">Admin</a>
+                    <a href="<?=_BASE_URL_?>" class="btn btn-secondary mt-2">Clear</a>
+                    <a href="<?=_BASE_URL_?>/admin.php" class="btn btn-secondary mt-2">Admin</a>
                 </div>
             </form>
 

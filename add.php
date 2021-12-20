@@ -41,8 +41,8 @@ include 'Template/html_start.php';
             <label for="thumbnail">Thumbnail</label>
             <input type="text" class="form-control" id="thumbnail" name="thumbnail" autocomplete="off" placeholder="Enter the thumbnail url">
         </div>
-        <a type="submit" href="/example/submit.php" class="btn btn-primary mt-2">Create</a>
-        <a href="/example/" class="btn btn-secondary mt-2">Cancel</a>
+        <a type="submit" href="<?=_BASE_URL_?>/submit.php" class="btn btn-primary mt-2">Create</a>
+        <a href="<?=_BASE_URL_?>/" class="btn btn-secondary mt-2">Cancel</a>
     </form>
 </div><!-- /container -->
 

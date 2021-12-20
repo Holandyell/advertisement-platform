@@ -1,6 +1,6 @@
 <?php
 
-include 'App/config.php';
+include 'config.php';
 
 if (!empty($_POST)) {
     $title = $_POST['title'];
@@ -14,5 +14,5 @@ if (!empty($_POST)) {
     $repository->createAdvertisement($title, $category, $location, $price, $description, $thumbnail);
 }
 
-header('Location: /example');
+header('Location: ' . _BASE_URL_);
 exit ();

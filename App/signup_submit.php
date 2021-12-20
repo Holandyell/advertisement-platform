@@ -1,7 +1,18 @@
 <?php
 
-require_once 'App/config.php';
-require_once 'App/functions.php';
+require_once 'config.php';
+require_once 'functions.php';
+
+
+function redirectUser($param = null) {
+    $url = _BASE_URL_ . '/signup.php';
+    if ($param) {
+        $url = $url . '?' . $param;
+    }
+    header("location: ' . _BASE_URL_ . '/signup.php?error=emptyinput");
+    exit;
+}
+
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
@@ -12,30 +23,25 @@ if (isset($_POST['submit'])) {
 
 
     if (emptyInputSignup($name, $emil, $username, $pwd, $pwdrepeat) !== false) {
-        header("location: ../signup.php?error=emptyinput");
-        exit();
+        redirectUser('error=emptyinput');
     }
+
     if (invalidUid($username) !== false) {
-        header("location: ../signu.php?error=invaliduid");
-        exit();
+        redirectUser('error=invaliduid');
     }
 
     if (invalidEmail($emil) !== false) {
-        header("location: ../signu.php?error=invalidemail");
-        exit();
+        redirectUser('error=invaliduid');
     }
 
     if (pwdMatch($pwd, $pwdrepeat) !== false) {
-        header("location: ../signu.php?error=passwordsdontmatch");
-        
+        redirectUser('error=passwordsdontmatch');
     }
 
     if (uidExist($conn, $username, $emil) !== false) {
-        header("location: ../signu.php?error=usernametaken");
-        exit();
+        redirectUser('error=usernametaken');
     }
     createUser($conn, $name, $emil, $username, $pwd);
 } else {
-    header("location: ../signup.php");
-    exit();
+    redirectUser();
 }

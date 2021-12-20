@@ -6,6 +6,9 @@ define('_DB_NAME_', 'vajiko_db');
 define('_DB_USER_', 'root');
 define('_DB_PASS_', 'test');
 
+
+define('_BASE_URL_', '/example');
+
 include 'Repository/BaseRepository.php';
 include 'Repository/CategoryRepository.php';
 include 'Repository/LocationRepository.php';
